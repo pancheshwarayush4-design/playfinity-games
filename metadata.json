@@ -1,0 +1,6 @@
+{
+  "name": "Playfinity Games",
+  "description": "Mobile-friendly gaming platform and HTML5 web portal featuring playable online arcade games, verified official game downloads across 6 categories, and complete GitHub Pages source files.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

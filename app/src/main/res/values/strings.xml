@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Playfinity Games</string>
+    <string name="brand_logo_text">PLAYFINITY GAMES</string>
+    <string name="hero_heading">ENTER THE WORLD OF GAMING</string>
+    <string name="hero_subtitle">Discover verified mobile &amp; PC downloads, play instant HTML5 browser games, and deploy your own gaming portal.</string>
+    <string name="search_placeholder">Search games by name, genre, or tag…</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_downloads">Download</string>
+    <string name="nav_play_online">Play Online</string>
+    <string name="nav_categories">Categories</string>
+    <string name="nav_about_contact">Hub &amp; Code</string>
+    <string name="btn_play_now">PLAY NOW</string>
+    <string name="btn_download_official">OFFICIAL DOWNLOAD</string>
+    <string name="btn_fullscreen">FULL SCREEN</string>
+    <string name="btn_exit_fullscreen">EXIT FULL SCREEN</string>
+    <string name="section_featured">FEATURED GAMES</string>
+    <string name="section_latest">LATEST RELEASES</string>
+    <string name="section_popular">POPULAR GAMES</string>
+    <string name="verified_badge">100% Official &amp; Authorized Links</string>
+</resources>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>PLAYFINITY GAMES — Enter The World of Gaming | Free Online &amp; Official Game Downloads</title>
+  <meta name="description" content="PLAYFINITY GAMES is a fast, mobile-friendly gaming platform featuring playable HTML5 browser games and verified official Android &amp; PC game downloads across Action, Horror, Arcade, Racing, Adventure, and Offline Games." />
+  <meta name="theme-color" content="#05070E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sticky Top Navigation Header -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="PLAYFINITY GAMES Home">
+        <span class="logo-icon" aria-hidden="true">&#9889;</span>
+        <span class="logo-text">PLAYFINITY <span>GAMES</span></span>
+      </a>
+
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" data-nav="home">Home</a></li>
+          <li><a href="#download-games" class="nav-link" data-nav="download-games">Download Games</a></li>
+          <li><a href="#play-online" class="nav-link" data-nav="play-online">Play Online</a></li>
+          <li><a href="#categories" class="nav-link" data-nav="categories">Categories</a></li>
+          <li><a href="#about" class="nav-link" data-nav="about">About Us</a></li>
+          <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">NEXT-GEN MOBILE &amp; BROWSER GAMING HUB</div>
+        <h1 class="hero-heading">ENTER THE WORLD OF GAMING</h1>
+        <p class="hero-subtitle">
+          Experience instant-play HTML5 arcade originals and discover 100% verified, official game downloads across Action, Horror, Arcade, Racing, Adventure, and Offline titles.
+        </p>
+
+        <!-- Global Search Bar -->
+        <div class="search-bar-wrapper" role="search">
+          <label for="gameSearchInput" class="sr-only">Search games by name</label>
+          <input
+            type="search"
+            id="gameSearchInput"
+            class="search-input"
+            placeholder="Search games by name, category, or tag (e.g. Asphalt, Horror, Cyber Drift)..."
+            autocomplete="off"
+          />
+          <button type="button" id="clearSearchBtn" class="search-clear-btn" aria-label="Clear search" hidden>&times;</button>
+          <button type="button" id="searchActionBtn" class="btn btn-primary search-btn">Search</button>
+        </div>
+        <div id="searchStatusText" class="search-status" aria-live="polite"></div>
+
+        <div class="hero-cta-group">
+          <a href="#play-online" class="btn btn-primary btn-glow">Play Online Now</a>
+          <a href="#download-games" class="btn btn-outline">Browse Official Downloads</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-pill"><strong>100%</strong> Verified Official Links</div>
+          <div class="stat-pill"><strong>3</strong> Original HTML5 Mobile Games</div>
+          <div class="stat-pill"><strong>6</strong> Core Gaming Genres</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME HIGHLIGHTS: FEATURED, LATEST RELEASES, POPULAR -->
+    <section class="highlights-section container" aria-label="Game Highlights">
+      <div class="highlight-tabs" role="tablist" aria-label="Highlight collections">
+        <button class="tab-btn active" role="tab" aria-selected="true" data-showcase="featured">Featured Games</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-showcase="latest">Latest Releases</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-showcase="popular">Popular Games</button>
+      </div>
+      <div id="showcaseGrid" class="games-grid showcase-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- 2. CATEGORIES SECTION -->
+    <section id="categories" class="section categories-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">EXPLORE BY GENRE</span>
+            <h2 class="section-title">GAME CATEGORIES</h2>
+          </div>
+          <p class="section-desc">Tap any genre to filter official downloads below.</p>
+        </div>
+        <div class="category-cards-grid" id="categoryCardsGrid">
+          <button class="category-card active" data-category="All">
+            <span class="cat-icon">&#127918;</span>
+            <span class="cat-name">All Games</span>
+            <span class="cat-count" id="count-All">12 Titles</span>
+          </button>
+          <button class="category-card" data-category="Action">
+            <span class="cat-icon">&#9876;</span>
+            <span class="cat-name">Action</span>
+            <span class="cat-count" id="count-Action">2 Titles</span>
+          </button>
+          <button class="category-card" data-category="Horror">
+            <span class="cat-icon">&#128128;</span>
+            <span class="cat-name">Horror</span>
+            <span class="cat-count" id="count-Horror">2 Titles</span>
+          </button>
+          <button class="category-card" data-category="Arcade">
+            <span class="cat-icon">&#128377;</span>
+            <span class="cat-name">Arcade</span>
+            <span class="cat-count" id="count-Arcade">2 Titles</span>
+          </button>
+          <button class="category-card" data-category="Racing">
+            <span class="cat-icon">&#127950;</span>
+            <span class="cat-name">Racing</span>
+            <span class="cat-count" id="count-Racing">2 Titles</span>
+          </button>
+          <button class="category-card" data-category="Adventure">
+            <span class="cat-icon">&#129517;</span>
+            <span class="cat-name">Adventure</span>
+            <span class="cat-count" id="count-Adventure">2 Titles</span>
+          </button>
+          <button class="category-card" data-category="Offline Games">
+            <span class="cat-icon">&#128246;</span>
+            <span class="cat-name">Offline Games</span>
+            <span class="cat-count" id="count-Offline">2 Titles</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. DOWNLOAD GAMES SECTION -->
+    <section id="download-games" class="section download-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">VERIFIED &amp; AUTHORIZED STORES ONLY</span>
+            <h2 class="section-title">DOWNLOAD GAMES</h2>
+          </div>
+          <div class="active-filter-badge" id="activeFilterBadge">Showing: All Categories</div>
+        </div>
+        <p class="safety-notice">
+          <strong>Official Link Guarantee:</strong> Every download button below links directly to the official Google Play Store, F-Droid Open Source Repository, or official publisher page. We never host modified APKs or fake links.
+        </p>
+
+        <div id="downloadGamesGrid" class="games-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 4. PLAY ONLINE (HTML5 PLAYABLE GAMES) -->
+    <section id="play-online" class="section online-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">INSTANT HTML5 BROWSER ARCADE</span>
+            <h2 class="section-title">PLAY ONLINE</h2>
+          </div>
+          <p class="section-desc">Zero installs. Built for mobile touch &amp; desktop keyboards with Full-Screen support.</p>
+        </div>
+
+        <!-- Online Game Selector Cards -->
+        <div class="online-cards-grid" id="onlineGamesList">
+          <article class="online-game-card active-online-card" data-online-game="cyber-drift">
+            <div class="online-card-art art-cyber-drift">
+              <span class="live-pill">PLAYABLE NOW</span>
+              <div class="art-glyph">&#128664;</div>
+            </div>
+            <div class="online-card-body">
+              <span class="game-cat-tag">Racing / Arcade</span>
+              <h3>Cyber Drift: Neon Overdrive</h3>
+              <p>Steer your electric interceptor through a high-speed neon synth highway. Collect blue energy cores, trigger overdrive, and dodge barrier drones.</p>
+              <button class="btn btn-primary btn-full launch-online-btn" data-launch="cyber-drift">Play Now</button>
+            </div>
+          </article>
+
+          <article class="online-game-card" data-online-game="void-striker">
+            <div class="online-card-art art-void-striker">
+              <span class="live-pill">PLAYABLE NOW</span>
+              <div class="art-glyph">&#128640;</div>
+            </div>
+            <div class="online-card-body">
+              <span class="game-cat-tag">Action / Space Shooter</span>
+              <h3>Void Striker: Sector Zero</h3>
+              <p>Command the PF-9 Starfighter against incoming cyber-armadas. Drag or tap on mobile to maneuver and fire twin plasma cannons.</p>
+              <button class="btn btn-primary btn-full launch-online-btn" data-launch="void-striker">Play Now</button>
+            </div>
+          </article>
+
+          <article class="online-game-card" data-online-game="quantum-pulse">
+            <div class="online-card-art art-quantum-pulse">
+              <span class="live-pill">PLAYABLE NOW</span>
+              <div class="art-glyph">&#9889;</div>
+            </div>
+            <div class="online-card-body">
+              <span class="game-cat-tag">Arcade / Reflex</span>
+              <h3>Quantum Pulse: Core Matrix</h3>
+              <p>Test your reaction speed and tactical memory! Tap surging electric nodes before they overload the grid in this fast-paced mobile reflex challenge.</p>
+              <button class="btn btn-primary btn-full launch-online-btn" data-launch="quantum-pulse">Play Now</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Interactive HTML5 Game Arena -->
+        <div class="arcade-cabinet" id="arcadeCabinet">
+          <div class="cabinet-topbar">
+            <div class="cabinet-title-wrap">
+              <span class="status-dot"></span>
+              <strong id="activeGameTitle">Cyber Drift: Neon Overdrive</strong>
+              <span class="cabinet-score" id="cabinetScoreDisplay">SCORE: 0 | BEST: 0</span>
+            </div>
+            <div class="cabinet-actions">
+              <button type="button" id="restartGameBtn" class="btn btn-small btn-outline">Restart</button>
+              <button type="button" id="fullscreenGameBtn" class="btn btn-small btn-primary">Full Screen</button>
+            </div>
+          </div>
+
+          <div class="canvas-stage" id="canvasStage">
+            <canvas id="gameCanvas" width="800" height="460" aria-label="Interactive HTML5 Game Canvas"></canvas>
+          </div>
+
+          <!-- Mobile Touch Controls Bar -->
+          <div class="touch-controls-bar" id="touchControlsBar">
+            <button type="button" class="touch-btn" id="touchLeftBtn" aria-label="Move Left">&#9664; LEFT</button>
+            <button type="button" class="touch-btn touch-btn-action" id="touchActionBtn" aria-label="Boost or Fire">&#9889; BOOST / FIRE</button>
+            <button type="button" class="touch-btn" id="touchRightBtn" aria-label="Move Right">RIGHT &#9654;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ABOUT US SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-card">
+            <span class="section-eyebrow">OUR MISSION</span>
+            <h2 class="section-title">ABOUT PLAYFINITY GAMES</h2>
+            <p>
+              <strong>PLAYFINITY GAMES</strong> was built for players who want instant access to legitimate, mobile-friendly gaming without fake download buttons, intrusive popups, or broken links.
+            </p>
+            <p>
+              We combine an instant-play HTML5 browser arcade with a curated directory of official Android and cross-platform games across Action, Horror, Arcade, Racing, Adventure, and Offline play. Every external download points directly to verified stores like Google Play and F-Droid.
+            </p>
+            <ul class="feature-checklist">
+              <li>&#10004; 100% Authorized &amp; Official Store Links Only</li>
+              <li>&#10004; Original Mobile-Ready HTML5 Browser Games</li>
+              <li>&#10004; Lightweight, Fast-Loading Design for Mobile Data</li>
+              <li>&#10004; Open &amp; Ready for GitHub Pages Hosting</li>
+            </ul>
+          </div>
+
+          <div class="about-card github-guide-card">
+            <span class="section-eyebrow">FREE HOSTING GUIDE</span>
+            <h3>Publish on GitHub Pages (Android Mobile Guide)</h3>
+            <ol class="guide-steps">
+              <li><strong>Create Account:</strong> Sign in at <code>github.com</code> on your Android browser and tap <strong>+ &rarr; New repository</strong>.</li>
+              <li><strong>Name Repository:</strong> Enter <code>playfinity-games</code>, set it to <strong>Public</strong>, and tap <strong>Create repository</strong>.</li>
+              <li><strong>Upload Files:</strong> Tap <strong>uploading an existing file</strong> and select <code>index.html</code>, <code>style.css</code>, and <code>script.js</code>. Commit changes.</li>
+              <li><strong>Enable Pages:</strong> Go to <strong>Settings &rarr; Pages</strong>, choose <strong>Deploy from a branch &rarr; main / (root)</strong>, and tap <strong>Save</strong>. Your live gaming website will be online in 60 seconds!</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <span class="section-eyebrow">GET IN TOUCH</span>
+            <h2 class="section-title">CONTACT US</h2>
+            <p>Have a game suggestion, want to submit your indie HTML5 title, or need to report an updated store link? Send a message to the PLAYFINITY GAMES team.</p>
+            <div class="contact-channels">
+              <div class="channel-item">
+                <strong>Official Portal:</strong>
+                <span>playfinitygames.github.io (GitHub Pages Ready)</span>
+              </div>
+              <div class="channel-item">
+                <strong>Submission Policy:</strong>
+                <span>Official store links &amp; verified playable HTML5 builds only.</span>
+              </div>
+            </div>
+          </div>
+
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="senderName">Gamer Tag / Name</label>
+              <input type="text" id="senderName" required placeholder="e.g. AlexVortex" />
+            </div>
+            <div class="form-group">
+              <label for="senderTopic">Topic</label>
+              <select id="senderTopic">
+                <option value="Game Request">Request an Official Game</option>
+                <option value="Submit HTML5 Game">Submit an Original HTML5 Game</option>
+                <option value="Feedback">Website Feedback / Bug Report</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="senderMessage">Message</label>
+              <textarea id="senderMessage" rows="4" required placeholder="Tell us which game or feature you'd like to see on PLAYFINITY GAMES..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <p id="contactFeedback" class="contact-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>PLAYFINITY <span>GAMES</span></strong>
+        <p>Enter The World of Gaming &mdash; Official Downloads &amp; Instant HTML5 Arcade.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#download-games">Download</a>
+        <a href="#play-online">Play Online</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
